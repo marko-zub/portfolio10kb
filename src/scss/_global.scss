@@ -1,0 +1,19 @@
+@import "compass/css3";
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500);
+html,
+body{
+  height: 100%;
+}
+body {
+  position: relative;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+    @include box-sizing(border-box);
+    &:after,
+    &:before {
+        @include box-sizing(border-box);
+    }
+}
