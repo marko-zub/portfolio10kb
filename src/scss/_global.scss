@@ -1,13 +1,14 @@
 @import "compass/css3";
-@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500);
-html,
-body{
+
+html {
   height: 100%;
+  // overflow: hidden;
 }
 body {
+	height: 100%;
   position: relative;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 * {
@@ -17,6 +18,13 @@ body {
         @include box-sizing(border-box);
     }
 }
+
+a {
+	color: #34495e;
+	&:hover {
+		color: darken(#34495e, 10%);
+	}
+}
 .header {
 	position: fixed;
 	left: 0;
@@ -24,19 +32,22 @@ body {
 	width: 100%;
 	overflow: hidden;
 	z-index: 4;
-	padding: 10px 30px;
-	font-style: 26px;
+	padding: 20px 30px;
+	font-style: 31px;
+	text-transform: uppercase;
+	font-weight: 500;
 }
 .logo {
 	float: left;
+	font-weight: 700;
+	// font-size: 31px;
+	small {
+		font-size: 70%;
+	}
 }
 .container {
 	width: 700px;
 	margin: 0 auto;
-}
-.menu-icon {
-	display: block;
-	float: right;
 }
 
 .overlay {
@@ -47,7 +58,8 @@ body {
 	height: 100%;
 	z-index: 3;
 	visibility: hidden;
-	background-color: rgba(255, 255, 255, 0.96);
+	// background-color: rgba(255, 255, 255, 0.26);
+	background-color: #ebebeb;
 	@include transition(all 0.3s ease-in-out);
 	top: -100%;
 }

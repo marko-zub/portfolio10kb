@@ -1,26 +1,31 @@
 .slider
-  .slider-nav
-    %label{:for => "slide-1"}
-      slide #1
-    %label{:for => "slide-2"}
-      slide #2
-    %label{:for => "slide-3"}
-      slide #3
-  %input{:type => "radio", :name=>"slider", :id=>"slide-1", :checked=>'checked'}/
+  %input{:type => "radio", :name=>"slider", :id=>"portfolio", :checked=>'checked'}/
   .slide
-    .slide-img{:style=>'background-image: url("https://unsplash.it/1920/768?image=1014")'}
-    .slide-title
-      CSS and HTML checkbox slider <br />
-      Slide #1
-  %input{:type => "radio", :name=>"slider", :id=>"slide-2"}/
+    .slide-img
+    .cube.pos1
+      %h2
+        Project #1
+      .description
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, odio explicabo, fugit quas tempore eligendi temporibus nemo dolores porro assumenda repellat quos cupiditate vero ex. Vel deserunt delectus quibusdam possimus.
+    .cube.pos2
+      %h2
+        Project #2
+      .description
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, odio explicabo, fugit quas tempore eligendi temporibus nemo dolores porro assumenda repellat quos cupiditate vero ex. Vel deserunt delectus quibusdam possimus.
+    .cube.pos3
+      %h2
+        Project #2
+      .description
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, odio explicabo, fugit quas tempore eligendi temporibus nemo dolores porro assumenda repellat quos cupiditate vero ex. Vel deserunt delectus quibusdam possimus.
+    
+  %input{:type => "radio", :name=>"slider", :id=>"about"}/
   .slide
-    .slide-img{:style=>'background-image: url("https://unsplash.it/1920/768?image=1064")'}
+    .slide-img
     .slide-title
-      With Fade animation <br />
-      Slide #2
+      About us
   %input{:type => "radio", :name=>"slider", :id=>"slide-3"}/
   .slide
-    .slide-img{:style=>'background-image: url("https://unsplash.it/1920/768?image=1022")'}
+    .slide-img
     .slide-title
       Click <br />
       Slide #3
