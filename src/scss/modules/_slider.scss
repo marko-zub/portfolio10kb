@@ -1,153 +1,210 @@
 .slider-nav {
-  float: right;
-  // margin: 45px 0;
-  // position: absolute;
-  // width: 100%;
-  // text-align: center;
-  // z-index: 1;
-  // bottom: 0;
-  label {
-    // display: inline-block;
-    // padding:0;
-    // cursor: pointer;
-    // margin: 10px 2px;
-    // background-color: transparent;
-    // border-radius: 50%;
-    // width: 20px;
-    // height: 20px;
-    // border: 2px solid #000;
-    // font-size: 0;
+    float: right;
+    margin: 0 -15px;
+}
+
+label {
     margin: 0 15px;
     cursor: pointer;
     position: relative;
+    line-height: 35px;
+
     span {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      height: 4px;
-      background-color: #000;
-      width: 0;
-      visibility: hidden;
-      @include transition(all 0.3s ease-in-out);
-      margin: -2px -5px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        height: 2px;
+        background-color: #000;
+        width: 0;
+        visibility: hidden;
+        padding: 0 3px;
+        margin: -1px -5px;
+
+        @include transition(all 0.1s ease-in-out);
+
     }
-    
-    &:target,
+
     &:hover {
-      // background-color: #000;
-      span {
-        width: 110%;
-        visibility: visible;
-      }
+        span {
+            width: 100%;
+            visibility: visible;
+        }
     }
-  }
+}
+
+a {
+    position: relative;
+    display: inline-block;
+
+    &:after {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        height: 2px;
+        background-color: #000;
+        width: 0;
+        visibility: hidden;
+        content: '';
+
+        @include transition(all 0.1s ease-in-out);
+
+        margin: -1px -5px;
+    }
+
+    &:hover {
+        &:after {
+            width: 100%;
+            visibility: visible;
+        }
+    }
 }
 
 .slider {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  input {
-    display: none;
-    &:checked {
-      & + .slide {
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-  }
-}
-
-
-.slide {
-position: absolute;
-visibility: hidden;
-left: 0;
-top: 0;
-bottom: 0;
-right: 0;
-opacity: 0;
-// .slide-img {
-//   &:after {
-//     position: absolute;
-//     content: '';
-//     left: 0;
-//     top: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: #000;
-//     opacity: 0.3;
-//   }
-// }
-@include transition(all 0.3s ease-in-out);
-.slide-img {
-    background-size: cover;
-    height: 100%;
     position: relative;
     width: 100%;
-}
-.slide-title {
-  text-align: center;
-  position: absolute;
-  z-index: 3;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-size: 36px;
-  line-height: 46px;
-  // color: #fff;
-  top: 20%;
-  font-weight: 100;;
-  @include transform(translate(0, -50%));
-}
+    height: 100%;
+    overflow: hidden;
+
+    input {
+        display: none;
+
+        &:checked {
+            & + .slide {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
 }
 
+.slide {
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+
+    @include transition(all 0.3s ease-in-out);
+
+    .container {
+        margin-top: 15%;
+    }
+}
+
+.slide-title {
+    text-align: center;
+    font-size: 36px;
+    line-height: 46px;
+    text-transform: uppercase;
+    font-family: $font_primary;
+    top: 20%;
+
+    @include transform(translate(0, -50%));
+}
 
 .cube {
-  display: block;
-  width: 200px;
-  height: 200px;
-  // background-color: #3498db;
-  border: 8px solid #3498db;
-  // color: #FFF;
-  position: absolute;
-  padding: 10px 15px;
-  font-size: 18px;
-  overflow: hidden;
-  @include transition(all 0.3s ease-in-out);
-  .description {
-    display: none;
-    visibility: hidden;
-  }
-  &:hover {
-    z-index: 3;
-    width: 350px;
-    height: 350px;
-    background-color: #FFF;
+    display: block;
+    width: 200px;
+    height: 200px;
+    border: 8px solid darken(#3498db, 10%);
+    position: absolute;
+    padding: 10px 15px 40px;
+    font-size: 18px;
+    overflow: hidden;
+
+    @include transition(all 0.3s ease-in-out);
+
     .description {
-      display: block;
-      visibility: visible;
+        display: none;
+        visibility: hidden;
     }
-  }
-  h2 {
-    font-size: 31px;
-    text-transform: uppercase;
-  }
+
+    &:hover {
+        z-index: 3;
+        width: 350px;
+        height: 370px;
+        background-color: #FFF;
+        border-width: 6px;
+
+        .description {
+            display: block;
+            visibility: visible;
+        }
+    }
+
+    h2 {
+        font-size: 31px;
+        text-transform: uppercase;
+    }
+}
+
+.slider {
+    &:hover {
+        .cube {
+            animation: none !important;
+        }
+    }
+}
+
+
+
+.pos1 {
+    left: 20%;
+    bottom: 35%;
+}
+
+.pos2 {
+    right: 10%;
+    top: 40%;
+    border-color: darken(#27ae60, 5%);
 }
 
 .pos3 {
-  left: 40%;
-  top: 20%;
-  border-color: #f1c40f;
+    left: 40%;
+    top: 20%;
+    border-color: #f1c40f;
 }
-.pos1 {
-  left: 20%;
-  bottom: 20%;
-  
+
+.pos4 {
+    left: 45%;
+    bottom: 25%;
+    border-color: darken(#2c3e50, 5%);
 }
-.pos2 {
-  right: 10%;
-  top: 40%;
-  border: 8px solid #27ae60;
+
+$project_count: 4;
+@for $col from 1 through $project_count {
+    .pos#{$col} {
+        animation: move-#{$col} 5s infinite;
+    }
 }
+
+@for $col from 1 through $project_count {
+    @keyframes move-#{$col} {
+        30% {
+            @include transform(translate(percentage((random(20) - 10) / 100), percentage((random(20) - 10) / 100)));
+        }
+        60% {
+            @include transform(translate(percentage((random(20) - 10) / 100), percentage((random(20) - 10) / 100)));
+        }
+
+    }
+}
+
+// $screen-sm-min: 768px;
+// @media (max-width: $screen-sm-min) {
+//     .cube {
+//         position: static;
+//         margin: 0 auto 20px;
+//         height: auto;
+//         padding: 0 20px;
+//         width: 100%;
+//     }
+//     label {
+//         margin: 0 5px;
+//     }
+//     .container {
+//         width: 100%;
+//     }
+// }

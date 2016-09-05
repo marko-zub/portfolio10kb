@@ -20,30 +20,37 @@
         %label{:for => "about"}
           About
           %span
-        %label{:for => "slide-3"}
-          slide #3        
-          %span
+        / %label{:for => "slide-3"}
+        /   Awards
+        /   %span
         %label{:for => "menu"}
           contact us
           %span
-    .container
+
     = render :partial => "modules/slider.haml"
-    .section
-      .container
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis praesentium voluptates obcaecati accusantium neque atque quod, molestias sint iure quidem consequuntur, numquam natus error nemo corrupti maxime fuga pariatur? Alias.
+    / .section
+    /   .container
+    /     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis praesentium voluptates obcaecati accusantium neque atque quod, molestias sint iure quidem consequuntur, numquam natus error nemo corrupti maxime fuga pariatur? Alias.
 
     %input{:type => "radio", "name"=>"slider", "id"=>"menu" }/
     .overlay
       %nav.nav
-        %a{:href => "#"}
-          Email
-        %a{:href => "#"}
-          Behance
-        %a{:href => "#"}
-          Dribbble
-        %a{:href => "#"}
-          Github          
-        %a{:href => "#"}
-          Twitter
-        %a{:href => "#"}
-          Linkedin
+        %ul
+          %li
+            %a{:href => "#"}
+              Email
+          %li
+            %a{:href => "#"}
+              Behance
+          %li
+            %a{:href => "#"}
+              Dribbble
+          %li
+            %a{:href => "#"}
+              Github
+          %li
+            %a{:href => "#"}
+              Twitter
+          %li
+            %a{:href => "#"}
+              Linkedin
