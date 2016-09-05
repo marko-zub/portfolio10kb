@@ -1,0 +1,26 @@
+.slider
+  .slider-nav
+    %label{:for => "slide-1"}
+      slide #1
+    %label{:for => "slide-2"}
+      slide #2
+    %label{:for => "slide-3"}
+      slide #3
+  %input{:type => "radio", :name=>"slider", :id=>"slide-1", :checked=>'checked'}/
+  .slide
+    .slide-img{:style=>'background-image: url("https://unsplash.it/1920/768?image=1014")'}
+    .slide-title
+      CSS and HTML checkbox slider <br />
+      Slide #1
+  %input{:type => "radio", :name=>"slider", :id=>"slide-2"}/
+  .slide
+    .slide-img{:style=>'background-image: url("https://unsplash.it/1920/768?image=1064")'}
+    .slide-title
+      With Fade animation <br />
+      Slide #2
+  %input{:type => "radio", :name=>"slider", :id=>"slide-3"}/
+  .slide
+    .slide-img{:style=>'background-image: url("https://unsplash.it/1920/768?image=1022")'}
+    .slide-title
+      Click <br />
+      Slide #3
