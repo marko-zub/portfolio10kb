@@ -1,52 +1,25 @@
 <!DOCTYPE html>
 %html
-    %head
-        <meta charset="utf-8">
-        <title>Portfolio 10kb</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/style.css">
-    %body
-        .header
-            .logo
-                10
-                %small
-                    kb
-            .slider-nav
-                %label{:for => "portfolio"}
-                    Portfolio
-                    %span
-                %label{:for => "about"}
-                    About
-                    %span
-                %label{:for => "menu"}
-                    contact us
-                    %span
-
-        = render :partial => "modules/slider.haml"
-        %input{:type => "radio", "name"=>"slider", "id"=>"menu" }/
-        .overlay
-            .bg
-            .bg
-            .bg
-            .bg
-            %nav.main-nav
-                %ul
-                    %li
-                        %a.link{:href => "mailto:i.markozub@gmail.com"}
-                            Email
-                    %li
-                        %a.link{:href => "#", "target"=>"_blank"}
-                            Behance
-                    %li
-                        %a.link{:href => "#", "target"=>"_blank"}
-                            Dribbble
-                    %li
-                        %a.link{:href => "https://github.com/marko-zub", "target"=>"_blank"}
-                            Github
-                    %li
-                        %a.link{:href => "#", "target"=>"_blank"}
-                            Twitter
-                    %li
-                        %a.link{:href => "https://www.linkedin.com/in/marko-zub", "target"=>"_blank"}
-                            Linkedin
+  %head
+    <meta charset="utf-8">
+    <title>Portfolio 10kb</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+  %body
+    .header
+      .logo
+        10
+        %small
+          kb
+      .slider-nav
+        %label{:for => "portfolio"}
+          Portfolio
+          %span
+        %label{:for => "about"}
+          About
+          %span
+        %label{:for => "menu"}
+          contact us
+          %span
+    = render :partial => "modules/slider.haml"

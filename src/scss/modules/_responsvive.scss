@@ -1,0 +1,51 @@
+@media (max-width: $screen-sm-min) {
+    .header {
+        padding: 10px 20px;
+        position: absolute;
+    }
+    .slider {
+        height: auto;
+    }
+    .slide {
+        padding-top: 90px;
+        position: relative;
+        overflow-y: auto;
+    }
+    .cube {
+        position: static;
+        margin: 0 20px 10px;
+        height: auto;
+        padding: 0 20px 20px;
+        width: auto;
+        &:hover {
+            width: auto;
+        }
+    }
+    label {
+        margin: 0;
+    }
+    .container {
+        width: 100%;
+    }
+    .slider-nav {
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+    .slider-nav label {
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    .main-nav {
+        margin-top: 120px;
+        a {
+            font-size: 21px;
+        }
+    }
+    .logo {
+        small {
+            margin-left: 0px;
+        }
+    }
+}

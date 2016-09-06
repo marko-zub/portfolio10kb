@@ -45,7 +45,7 @@ a {
     top: 0;
     width: 100%;
     overflow: hidden;
-    z-index: 4;
+    z-index: 7;
     padding: 20px 30px;
     font-style: 31px;
     text-transform: uppercase;
@@ -66,6 +66,7 @@ a {
     small {
         font-size: 65%;
         margin-left: -10px;
+        display: inline-block;
     }
 }
 
