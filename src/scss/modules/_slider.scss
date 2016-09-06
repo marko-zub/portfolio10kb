@@ -1,6 +1,10 @@
 .slider-nav {
     float: right;
     margin: 0 -15px;
+    font-size: 0;
+    label {
+        font-size: 18px;
+    }
 }
 
 label {
@@ -17,7 +21,7 @@ label {
         left: 0;
         top: 50%;
         height: 2px;
-        background-color: #000;
+        background-color: #2c308c;
         width: 0;
         visibility: hidden;
         padding: 0 3px;
@@ -25,16 +29,16 @@ label {
     }
 }
 
-a {
+.link  {
     position: relative;
     display: inline-block;
-
+    color: #000;
     &:after {
         position: absolute;
         left: 0;
         top: 50%;
         height: 2px;
-        background-color: #000;
+        background-color: #2c308c;
         width: 0;
         visibility: hidden;
         content: '';
@@ -43,14 +47,14 @@ a {
 }
 
 label:hover span,
-a:hover:after {
+.link:hover:after {
     width: 100%;
     visibility: visible;
 }
 
-a:after,
+.link:after,
 label span {
-    @include transition(all 0.1s ease-in-out);
+    @include transition(all 0.1s #{$anim_curve});
 }
 
 .slider {
@@ -58,6 +62,7 @@ label span {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    padding: 100px 0;
 
     input {
         display: none;
@@ -105,12 +110,11 @@ label span {
     padding: 10px 15px 40px;
     font-size: 18px;
     overflow: hidden;
-
-    a {
-    	color: #205081;
+    .link {
+    	color: #2c308c;
     	font-weight: 600;
-    	padding: 0 5px;
-    	margin: 0 -5px;
+    	padding: 0 0 0 5px;
+    	margin: 0 0 0 -5px;
     }
 
     .description {
@@ -121,7 +125,7 @@ label span {
     &:hover {
         z-index: 3;
         width: 350px;
-        height: 370px;
+        height: 350px;
         background-color: #FFF;
         border-width: 6px;
 
@@ -168,14 +172,13 @@ label span {
     border-color: darken(#2c3e50, 5%);
 }
 
-$project_count: 4;
-
-@for $col from 1 through $project_count {
-    .pos#{$col} {
-        animation: move-#{$col} 5s infinite;
+@media (min-width: $screen-sm-min) {
+    @for $col from 1 through $project_count {
+        .pos#{$col} {
+            animation: move-#{$col} 5s infinite;
+        }
     }
 }
-
 @for $col from 1 through $project_count {
     @keyframes move-#{$col} {
         30% {
@@ -192,19 +195,45 @@ $project_count: 4;
     background-color: #a0cfc2;
 }
 
-// $screen-sm-min: 768px;
-// @media (max-width: $screen-sm-min) {
-//     .cube {
-//         position: static;
-//         margin: 0 auto 20px;
-//         height: auto;
-//         padding: 0 20px;
-//         width: 100%;
-//     }
-//     label {
-//         margin: 0 5px;
-//     }
-//     .container {
-//         width: 100%;
-//     }
-// }
+@media (max-width: $screen-sm-min) {
+    .header {
+        padding: 10px 20px;
+    }
+    .slide {
+        padding-top: 90px;
+        position: fixed;
+        overflow-y: auto;
+    }
+    .cube {
+        position: static;
+        margin: 0 20px 10px;
+        height: auto;
+        padding: 0 20px;
+        width: auto;
+        &:hover {
+            width: auto;
+        }
+    }
+    label {
+        margin: 0 3px;
+    }
+    .container {
+        width: 100%;
+    }
+    .slider-nav {
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+    .slider-nav label {
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    .main-nav {
+        margin-top: 120px;
+        a {
+            font-size: 21px;
+        }
+    }
+}
