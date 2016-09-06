@@ -4,10 +4,13 @@
 }
 
 label {
-    margin: 0 15px;
+    margin: 0 10px;
+    padding: 0 5px;
     cursor: pointer;
     position: relative;
     line-height: 35px;
+    overflow: hidden;
+    display: inline-block;
 
     span {
         position: absolute;
@@ -18,14 +21,7 @@ label {
         width: 0;
         visibility: hidden;
         padding: 0 3px;
-        margin: -1px -5px;
-    }
-
-    &:hover {
-        span {
-            width: 100%;
-            visibility: visible;
-        }
+        margin: -1px 0;
     }
 }
 
@@ -42,15 +38,14 @@ a {
         width: 0;
         visibility: hidden;
         content: '';
-        margin: -1px -5px;
+        margin: -1px 0;
     }
+}
 
-    &:hover {
-        &:after {
-            width: 100%;
-            visibility: visible;
-        }
-    }
+label:hover span,
+a:hover:after {
+    width: 100%;
+    visibility: visible;
 }
 
 a:after,
@@ -110,6 +105,13 @@ label span {
     padding: 10px 15px 40px;
     font-size: 18px;
     overflow: hidden;
+
+    a {
+    	color: #205081;
+    	font-weight: 600;
+    	padding: 0 5px;
+    	margin: 0 -5px;
+    }
 
     .description {
         display: none;

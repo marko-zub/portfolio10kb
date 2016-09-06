@@ -9,6 +9,7 @@ body {
     font-family: $font_secondary;
     font-weight: 400;
     background-color: #fff;
+    color: #333;
 }
 
 * {
@@ -31,7 +32,7 @@ a {
     text-decoration: none;
 
     &:hover {
-        color: darken(#34495e, 10%);
+        color: darken(#205081, 10%);
     }
 }
 
