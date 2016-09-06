@@ -8,6 +8,7 @@ body {
     margin: 0;
     font-family: $font_secondary;
     font-weight: 400;
+    background-color: #fff;
 }
 
 * {
@@ -26,7 +27,7 @@ h1, h2, h3, h4 {
 
 a {
     font-family: $font_primary;
-    color: #000;
+    color: #333;
     text-decoration: none;
 
     &:hover {
@@ -74,7 +75,7 @@ a {
     height: 100%;
     z-index: 3;
     visibility: hidden;
-    background-color: #efefef;
+    background-color: #fed700;
 
     @include transition(all 0.3s ease-in-out);
 
