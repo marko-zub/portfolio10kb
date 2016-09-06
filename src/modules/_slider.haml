@@ -1,72 +1,39 @@
 .slider
   %input{:type => "radio", :name=>"slider", :id=>"portfolio", :checked=>'checked'}/
-  .slide
+  .slide.slide-project
     .cube.pos1
-      %h2
-        Project #1
+      %h2 Project #1
       .description
-        %p
-          10kb portfolio for competition The 10k Apart<br />- used HAML and SCSS;<br />- HTML5, Pure CSS3;<br />- CSS animations; <br />- Responsive.
-        %p
-          %b
-            Development time:
-          3 days
-        %a.link{:href => "#"}
-          Live Demo >
+        %p 10kb portfolio for competition The 10k Apart<br />- used HAML and SCSS;<br />- HTML5, Pure CSS3;<br />- CSS animations; <br />- Responsive.
+        %p <b>Development time:</b> 3 days
+        %a.link{:href => "#"} Live Demo >
     .cube.pos2
-      %h2
-        Project #2
+      %h2 Project #2
       .description
-        %p
-          Some project X for USA company <br />- used HAML and SCSS;<br />- HTML5, CSS3, JS;<br />- Responsive;<br />- WordPress, PHP.
-        %p
-          %b
-            Development time:
-          2 weeks
-        %a.link{:href => "#"}
-          Live Demo >
+        %p Some project X for USA company <br />- used HAML and SCSS;<br />- HTML5, CSS3, JS;<br />- Responsive;<br />- WordPress, PHP.
+        %p <b>Development time:</b> 2 weeks
+        %a.link{:href => "#"} Live Demo >
     .cube.pos3
-      %h2
-        Project #2
+      %h2 Project #2
       .description
-        %p
-          Some project Y for secret company <br />- used HTML, CSS;<br />- HTML5, CSS3; <br />- Responsive;<br />- WordPress, PHP.
-        %p
-          %b
-            Development time:
-          12 weeks
-        %a.link{:href => "#"}
-          Live Demo >
+        %p Some project Y for secret company <br />- used HTML, CSS;<br />- HTML5, CSS3; <br />- Responsive;<br />- WordPress, PHP.
+        %p <b>Development time:</b> 12 weeks
+        %a.link{:href => "#"} Live Demo >
     .cube.pos4
-      %h2
-        Project #4
+      %h2 Project #4
       .description
-        %p
-          Some project Z for Unknown company <br />- used HAML and SCSS;<br />- HTML5, CSS3;<br />- CSS animations;<br />- WordPress, PHP.
-        %p
-          %b
-            Development time:
-          7 weeks
-        %a.link{:href => "#"}
-          Live Demo >
+        %p Some project Z for Unknown company <br />- used HAML and SCSS;<br />- HTML5, CSS3;<br />- CSS animations;<br />- WordPress, PHP.
+        %p <b>Development time:</b> 7 weeks
+        %a.link{:href => "#"} Live Demo >
   %input{:type => "radio", :name=>"slider", :id=>"about"}/
   .slide.slide-about
     .container
-      .slide-title
-        About us
+      .slide-title About us
       .slide-contnet
-        %p
-          <b>10kb portfolio site</b> - HTML5, CSS3 template without JS. <br/>
-          The main idea of 10kb portfolio was: create clear and minimal potrolio website.
-        %p
-          Approach is unique to create page without JS.<br />
-          I use pure CSS3 and HTML5.
+        %p<b>10kb portfolio site</b> - HTML5, CSS3 template without JS. <br/>The main idea of 10kb portfolio was: create clear and minimal potrolio website.
+        %p Approach is unique to create page without JS.<br />I use pure CSS3 and HTML5.
   %input{:type => "radio", "name"=>"slider", "id"=>"menu" }/
-  .overlay
-    .bg
-    .bg
-    .bg
-    .bg
+  .slide-contact
     %nav.main-nav
       %ul
         %li
@@ -81,3 +48,7 @@
           %a.link{:href => "#", "target"=>"_blank"} Twitter
         %li
           %a.link{:href => "https://www.linkedin.com/in/marko-zub", "target"=>"_blank"} Linkedin
+    .bg
+    .bg
+    .bg
+    .bg          
