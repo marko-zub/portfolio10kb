@@ -12,6 +12,9 @@
         padding-top: 90px;
         position: relative;
         overflow-y: auto;
+        .container {
+            margin-top: 0;
+        }
     }
 
     .cube {

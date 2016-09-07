@@ -93,7 +93,7 @@ label span {
     }
 
     .container {
-        margin-top: 15%;
+        margin-top: 13%;
     }
 }
 
@@ -103,9 +103,7 @@ label span {
     line-height: 46px;
     text-transform: uppercase;
     font-family: $font_primary;
-    top: 20%;
-
-    @include transform(translate(0, -50%));
+    margin: 0 0 30px 0;
 }
 
 .cube {

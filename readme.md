@@ -10,4 +10,4 @@ The main idea of 10kb portfolio was: create clear and minimal portfolio website 
 
 Used [FireApp](https://github.com/KKBOX/FireApp/releases) for build.
 
-Final files HTML, CSS in folder "production" size = 9.89 KB (10,136 bytes).
+Final files HTML, CSS in folder "production" size < 10KB :)
