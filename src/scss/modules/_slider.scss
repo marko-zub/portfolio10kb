@@ -2,6 +2,7 @@
     float: right;
     margin: 0 -15px;
     font-size: 0;
+
     .nav-item {
         display: inline-block;
         font-size: 18px;
@@ -38,8 +39,9 @@ label span,
     z-index: -1;
 }
 
-.link  {
+.link {
     color: #000;
+
     &:after {
         content: '';
     }
@@ -67,7 +69,6 @@ label span {
     input {
         display: none;
 
-
         &:checked {
             & + .slide {
                 visibility: visible;
@@ -85,10 +86,12 @@ label span {
     bottom: 0;
     right: 0;
     opacity: 0;
+
     &.slide-about {
         background-color: #a0cfc2;
         position: fixed;
     }
+
     .container {
         margin-top: 15%;
     }
@@ -114,31 +117,31 @@ label span {
     padding: 10px 15px 40px;
     font-size: 18px;
     overflow: hidden;
+
     .link {
-    	color: #2c308c;
-    	font-weight: 600;
-    	padding: 0 0 0 5px;
-    	margin: 0 0 0 -5px;
+        color: #2c308c;
+        font-weight: 600;
+        padding: 0 0 0 5px;
+        margin: 0 0 0 -5px;
     }
-    // @media (min-width: $screen-sm-min) {
+
+    .description {
+        display: none;
+        visibility: hidden;
+    }
+
+    &:hover {
+        z-index: 3;
+        width: 350px;
+        height: 350px;
+        background-color: #FFF;
+        border-width: 6px;
+
         .description {
-            display: none;
-            visibility: hidden;
+            display: block;
+            visibility: visible;
         }
-
-        &:hover {
-            z-index: 3;
-            width: 350px;
-            height: 350px;
-            background-color: #FFF;
-            border-width: 6px;
-
-            .description {
-                display: block;
-                visibility: visible;
-            }
-        }
-    // }
+    }
 
     h2 {
         font-size: 31px;
@@ -184,6 +187,7 @@ label span {
         }
     }
 }
+
 @for $col from 1 through $project_count {
     @keyframes move-#{$col} {
         30% {
@@ -195,4 +199,3 @@ label span {
         }
     }
 }
-
