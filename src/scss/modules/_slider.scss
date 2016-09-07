@@ -2,7 +2,8 @@
     float: right;
     margin: 0 -15px;
     font-size: 0;
-    label {
+    .nav-item {
+        display: inline-block;
         font-size: 18px;
     }
 }

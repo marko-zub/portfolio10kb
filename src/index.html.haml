@@ -13,13 +13,16 @@
         %small
           kb
       .slider-nav
-        %label{:for => "portfolio"}
-          Portfolio
-          %span
-        %label{:for => "about"}
-          About
-          %span
-        %label{:for => "menu"}
-          contact us
-          %span
+        .nav-item
+          %label{:for => "portfolio"}
+            Portfolio
+            %span
+        .nav-item
+          %label{:for => "about"}
+            About
+            %span
+        .nav-item
+          %label{:for => "menu"}
+            contact us
+            %span
     = render :partial => "modules/slider.haml"
