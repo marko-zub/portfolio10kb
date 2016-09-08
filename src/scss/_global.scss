@@ -11,6 +11,7 @@ body {
     background-color: #fff;
     color: #333;
     line-height: 1.2;
+    font-size: 18px;
 }
 
 *,
@@ -24,13 +25,12 @@ h1, h2, h3, h4 {
     font-weight: 400;
 }
 
-.link {
-    font-family: $font_primary;
-}
+
 a {
     color: #2c308c;
     text-decoration: none;
 
+    &:target,
     &:hover {
         color: #000;
     }
@@ -48,7 +48,7 @@ a {
     text-transform: uppercase;
     font-weight: 500;
 
-    label {
+    .nav-item {
         cursor: pointer;
         line-height: 35px;
     }
@@ -76,12 +76,12 @@ a {
 }
 
 .main-nav,
-.slide,
+.section,
 .cube {
     @include transition(all 0.3s #{$anim_curve});
 }
 
-.slide-contact {
+.section-contact {
     position: fixed;
     left: 0;
     top: 0;
@@ -126,20 +126,18 @@ a {
     }
 }
 
-#menu {
-    &:checked {
-        & + .slide-contact {
+#contacts {
+    &:target {
+        visibility: visible;
+        .contacts-nav {
+            opacity: 1;
             visibility: visible;
-            .main-nav {
-                opacity: 1;
-                visibility: visible;
-            }
-
-            .bg {
-                top: 0;
-                visibility: visible;
-            }
         }
+
+        .bg {
+            top: 0;
+            visibility: visible;
+        }        
     }
 }
 
@@ -147,7 +145,7 @@ a {
     padding: 40px;
 }
 
-.main-nav {
+.contacts-nav {
     text-align: center;
     margin-top: 13%;
     opacity: 0;

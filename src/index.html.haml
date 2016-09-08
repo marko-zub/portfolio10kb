@@ -7,22 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
   %body
-    .header
+    %header.header
       .logo
         10
         %small
           kb
-      .slider-nav
-        .nav-item
-          %label{:for => "portfolio"}
+      %nav.main-nav{"aria-label"=>"Main Navigation"}
+        %a.nav-item{:href => "#portfolio"}
+          %span.link
             Portfolio
-            %span
-        .nav-item
-          %label{:for => "about"}
+        %a.nav-item{:href => "#about"}
+          %span.link
             About
-            %span
-        .nav-item
-          %label{:for => "menu"}
+        %a.nav-item{:href => "#contacts"}
+          %span.link
             contact us
-            %span
-    = render :partial => "modules/slider.haml"
+    = render :partial => "modules/main.haml"
