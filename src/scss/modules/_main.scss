@@ -14,6 +14,9 @@
     padding: 0;
     cursor: pointer;
     line-height: 35px;
+    .link {
+        margin: 0 -5px;
+    }
 }
 
 .link {
@@ -81,12 +84,12 @@
         z-index: 3;
     }
 
-    &.section-about {
+    &.s-about {
         background-color: #a0cfc2;
         position: fixed;
     }
 
-    &.section-project {
+    &.s-project {
         background-color: #FFF;
         visibility: visible;
         opacity: 1;
@@ -97,7 +100,7 @@
     }
 }
 
-.section-title {
+.s-title {
     text-align: center;
     font-size: 36px;
     line-height: 46px;
@@ -118,16 +121,33 @@
 
     .link {
         color: #2c308c;
-        padding: 0 0 0 5px;
+        padding: 0 15px 0 5px;
         margin: 10px 0 0 -5px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        margin: 10px;
+        z-index: 1;
     }
-    
+
     .link,
     .description {
         display: none;
         visibility: hidden;
     }
-
+    &:after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        content: '>';
+        @include transform(rotate(90deg) translate(0, 0));
+        opacity: 1;
+        visibility: visible;
+        margin: 10px;
+        pointer-events: none;
+        z-index: 1;
+    }
     &:target,
     &:focus,
     &:hover {
@@ -144,11 +164,15 @@
             display: block;
             visibility: visible;
         }
+        &:after {
+            @include transform(rotate(0deg));
+        }
     }
 
     h1 {
-        margin: 20px 0 20px;
+        margin: 15px 0 15px;
         font-size: 31px;
+        line-height: 36px;
         text-transform: uppercase;
     }
 }

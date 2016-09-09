@@ -25,7 +25,6 @@ h1, h2, h3, h4 {
     font-weight: 400;
 }
 
-
 a {
     color: #2c308c;
     text-decoration: none;
@@ -75,13 +74,14 @@ a {
     margin: 0 auto;
 }
 
+.cube:after,
 .main-nav,
 .section,
 .cube {
     @include transition(all 0.3s #{$anim_curve});
 }
 
-.section-contact {
+.s-contact {
     position: fixed;
     left: 0;
     top: 0;
@@ -90,6 +90,7 @@ a {
     z-index: 3;
     visibility: hidden;
     top: 0;
+
     .bg {
         width: 25%;
         position: absolute;
@@ -100,11 +101,9 @@ a {
         visibility: hidden;
         z-index: 1;
 
-        &:nth-child(1) {
-            @include transition(all 0.45s #{$anim_curve});
+        @include transition(all 0.45s #{$anim_curve});
 
-            left: 0;
-        }
+        left: 0;
 
         &:nth-child(2) {
             @include transition(all 0.35s #{$anim_curve});
@@ -129,6 +128,7 @@ a {
 #contacts {
     &:target {
         visibility: visible;
+
         .contacts-nav {
             opacity: 1;
             visibility: visible;
@@ -137,13 +137,10 @@ a {
         .bg {
             top: 0;
             visibility: visible;
-        }        
+        }
     }
 }
 
-.content {
-    padding: 40px;
-}
 
 .contacts-nav {
     text-align: center;
